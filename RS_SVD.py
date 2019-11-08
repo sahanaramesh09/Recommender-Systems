@@ -122,8 +122,8 @@ predictions = algo.test(testset)
 # In[21]:
 
 
-from surprise import accuracy
-accuracy.rmse(predictions)
+#from surprise import accuracy
+#accuracy.rmse(predictions)
 
 
 # In[ ]:
@@ -165,7 +165,7 @@ data_surprise_test = Dataset.load_from_df(data_test, reader)
 # In[27]:
 
 
-trainset2, testset2 = train_test_split(data_surprise_test, test_size=0.90)
+#trainset2, testset2 = train_test_split(data_surprise_test, test_size=0.90)
 
 
 # In[57]:
@@ -267,26 +267,26 @@ result_final.to_csv('013832065_Submission.csv', index=False)
 # In[25]:
 
 
-from surprise import KNNWithMeans
+#from surprise import KNNWithMeans
 
 
 # In[28]:
 
 
-algo = KNNWithMeans(k=50, sim_options={'name': 'pearson_baseline', 'user_based': False})
-algo.fit(trainset)
+#algo = KNNWithMeans(k=50, sim_options={'name': 'pearson_baseline', 'user_based': False})
+#algo.fit(trainset)
 
 
 # In[37]:
 
 
-train_pred = algo.test(testset)
+#train_pred = algo.test(testset)
 
 
 # In[38]:
 
 
-accuracy.rmse(train_pred)
+#accuracy.rmse(train_pred)
 
 
 # In[ ]:
